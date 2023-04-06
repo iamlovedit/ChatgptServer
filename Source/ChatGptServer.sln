@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatGptService", "ChatGptService\ChatGptService.csproj", "{68348D31-A611-49A4-972B-4EC6C32BDDB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRWPF", "SignalRWPF\SignalRWPF.csproj", "{63CF4E25-5920-454A-BDB8-12AE344B227C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68348D31-A611-49A4-972B-4EC6C32BDDB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68348D31-A611-49A4-972B-4EC6C32BDDB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68348D31-A611-49A4-972B-4EC6C32BDDB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68348D31-A611-49A4-972B-4EC6C32BDDB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63CF4E25-5920-454A-BDB8-12AE344B227C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63CF4E25-5920-454A-BDB8-12AE344B227C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63CF4E25-5920-454A-BDB8-12AE344B227C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63CF4E25-5920-454A-BDB8-12AE344B227C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF433CE5-4CDE-4516-ABA4-7EE8F9B349DB}
+	EndGlobalSection
+EndGlobal

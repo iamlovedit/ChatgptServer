@@ -1,0 +1,66 @@
+﻿<Window
+    x:Class="SignalRWPF.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    xmlns:viewmodels="clr-namespace:SignalRWPF.ViewModels"
+    Title="{Binding Title}"
+    Width="525"
+    Height="700"
+    d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="140" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Border
+            Margin="4"
+            BorderBrush="Black"
+            BorderThickness="1">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Messages}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBlock
+                                    VerticalAlignment="Center"
+                                    Text="{Binding Content}"
+                                    TextWrapping="WrapWithOverflow" />
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Border>
+
+        <TextBox
+            Grid.Row="1"
+            Margin="4"
+            Padding="12"
+            Text="{Binding Content}"
+            TextWrapping="WrapWithOverflow" />
+
+        <DockPanel
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            LastChildFill="True">
+            <Button
+                Width="80"
+                Height="30"
+                Command="{Binding SendMessage}"
+                Content="生成内容" />
+            <Button
+                Width="80"
+                Height="30"
+                Margin="12,0,0,0"
+                Command="{Binding StopCommand}"
+                Content="停止生成" />
+        </DockPanel>
+    </Grid>
+</Window>
